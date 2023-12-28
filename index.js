@@ -34,7 +34,7 @@ async function run() {
     })
     //cart
     app.post('/cart', async (req, res) => {
-      const result = await cartCollection.insertOne(req.query)
+      const result = await cartCollection.insertOne(req.body)
       res.send(result);
   })
   
